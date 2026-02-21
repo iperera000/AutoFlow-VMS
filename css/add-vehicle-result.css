@@ -1,0 +1,48 @@
+/* add-vehicle-result.css */
+
+.result-container {
+    max-width: 500px;
+    margin: 100px auto;
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.success {
+    color: #4caf50;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.error {
+    color: #f44336;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 25px;
+    background: #a855f7;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #9333ea;
+}
+
+.btn.secondary {
+    background: #444;
+}
+
+.btn.secondary:hover {
+    background: #666;
+}
