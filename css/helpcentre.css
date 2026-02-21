@@ -1,0 +1,203 @@
+/* --- Global Resets --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #0b0b0b; /* From AutoFlow theme */
+    color: white;
+    line-height: 1.6;
+}
+
+/* --- Navbar Styling --- */
+.navbar {
+    padding: 20px 8%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #a855f7; /* AutoFlow signature purple */
+}
+
+/* --- Wrapper & Header --- */
+.help-wrapper {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.help-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.help-header h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.help-header p {
+    color: #888;
+    font-size: 1.1rem;
+}
+
+/* --- CSS Tab Logic --- */
+.tab-system input[type="radio"] {
+    display: none; /* Hides the logic buttons */
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.btn-tab {
+    padding: 12px 30px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #777;
+    transition: all 0.3s ease;
+}
+
+/* Highlighting the active tab using radio logic */
+#vehicle-tab:checked ~ .tab-buttons label[for="vehicle-tab"],
+#driver-tab:checked ~ .tab-buttons label[for="driver-tab"],
+#system-tab:checked ~ .tab-buttons label[for="system-tab"] {
+    background: #a855f7;
+    color: white;
+    border-color: #a855f7;
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+}
+
+/* --- Content Visibility Logic --- */
+.help-content {
+    display: none;
+    animation: slideIn 0.5s ease-out;
+}
+
+/* Shows the specific content linked to the checked radio button */
+#vehicle-tab:checked ~ .content-container .content-vehicle,
+#driver-tab:checked ~ .content-container .content-driver,
+#system-tab:checked ~ .content-container .content-system {
+    display: block;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Q&A Card Styling --- */
+.qa-card {
+    background: rgba(255, 255, 255, 0.03); /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    transition: 0.3s ease;
+}
+
+.qa-card:hover {
+    border-color: #a855f7;
+    background: rgba(168, 85, 247, 0.05);
+}
+
+.qa-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #eee;
+}
+
+.qa-card h3 i {
+    color: #a855f7;
+}
+
+/* Red icons for password issues to draw attention */
+.password-issue h3 i {
+    color: #ff4b4b;
+}
+
+.qa-card p {
+    color: #aaa;
+    padding-left: 38px;
+}
+
+/* --- Footer Styling --- */
+.footer {
+    background: #1c1024;
+    padding: 60px 8% 20px;
+    color: #fff;
+    margin-top: 80px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-col h3 span {
+    color: #a669e0;
+}
+
+.footer-col h4 {
+    color: #9d64d3;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 10px; }
+
+.footer-col ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #a855f7;
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #777;
+    font-size: 0.85rem;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .help-header h1 { font-size: 2.2rem; }
+    .tab-buttons { flex-direction: column; align-items: stretch; }
+    .btn-tab { text-align: center; }
+}
