@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/registervehicle.css">
+    <title>Register Vehicle - AutoFlow</title>
+</head>
+<body>
+    <div class="register-container">
+        <h2>Add New Vehicle</h2>
+        <form action="../php/add_vehicle.php" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="brand">Brand *</label>
+                <input type="text" name="brand" id="brand" required>
+            </div>
+
+            <div class="form-group">
+                <label for="model">Model *</label>
+                <input type="text" name="model" id="model" required>
+            </div>
+
+            <div class="form-group">
+                <label for="year">Year *</label>
+                <input type="number" name="year" id="year" required min="1900" max="2099">
+            </div>
+
+            <div class="form-group">
+                <label for="type">Type (e.g., Sedan, SUV, Truck) *</label>
+                <input type="text" name="type" id="type" required>
+            </div>
+
+            <div class="form-group">
+                <label for="engine_cc">Engine CC *</label>
+                <input type="number" name="engine_cc" id="engine_cc" required min="0">
+            </div>
+
+            <div class="form-group">
+                <label for="fuel_type">Fuel Type *</label>
+                <select name="fuel_type" id="fuel_type" required>
+                    <option value="">-- Select --</option>
+                    <option value="Petrol">Petrol</option>
+                    <option value="Diesel">Diesel</option>
+                    <option value="Electric">Electric</option>
+                    <option value="Hybrid">Hybrid</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="transmission">Transmission *</label>
+                <select name="transmission" id="transmission" required>
+                    <option value="">-- Select --</option>
+                    <option value="Manual">Manual</option>
+                    <option value="Automatic">Automatic</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="image">Vehicle Image</label>
+                <input type="file" name="image" id="image" accept="image/*">
+                <small>Leave empty to use default image</small>
+            </div>
+
+            <button type="submit" class="btn-submit">Add Vehicle</button>
+        </form>
+        <a href="../php/company-login-interface.php" class="back-link">← Back to Dashboard</a>
+    </div>
+</body>
+</html>
