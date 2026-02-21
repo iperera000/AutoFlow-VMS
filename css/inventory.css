@@ -98,6 +98,27 @@
 .search-section button:hover {
     background: #c469e7;
 }
+
+.clear-btn {
+    padding: 10px 20px;
+    background: #444;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    display: inline-block;
+}
+.clear-btn:hover {
+    background: #666;
+}
+
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    padding: 50px;
+}
+
 .feature-1 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
