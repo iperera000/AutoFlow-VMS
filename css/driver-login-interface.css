@@ -1,0 +1,213 @@
+/* --- Global Resets & Base Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #0b0b0b;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* --- Hero Section & Video Background --- */
+.main-hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.video-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    filter: brightness(0.4);
+}
+
+/* --- Navigation Bar --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo { font-size: 1.5rem; font-weight: bold; }
+.logo span { color: #a855f7; }
+
+.nav-links { display: flex; list-style: none; gap: 30px; align-items: center; }
+.nav-links a { text-decoration: none; color: #ddd; font-weight: 500; transition: 0.3s; }
+.nav-links a:hover, .nav-links a.active { color: #a855f7; }
+
+.nav-btn {
+    background: #a855f7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-btn:hover { background: #9333ea; }
+
+/* --- Hero Content --- */
+.hero-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+    padding: 0 5%;
+}
+
+.hero-content h1 { font-size: 3.5rem; font-weight: 900; margin-bottom: 10px; }
+.hero-content p { font-size: 1.2rem; color: #ccc; margin-bottom: 30px; }
+
+/* Driver Home Action Button */
+.primary-btn {
+    display: inline-block;
+    text-decoration: none;
+    background: #a855f7;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 15px rgba(168, 85, 247, 0.3);
+}
+
+.primary-btn:hover {
+    background: #9333ea;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(168, 85, 247, 0.5);
+}
+
+/* --- Info Section & Status Cards --- */
+.info-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 80px 8%;
+    background-color: #0b0b0b;
+    flex-wrap: wrap;
+}
+
+.status-card {
+    background: #151515;
+    padding: 40px 30px;
+    border-radius: 20px;
+    border: 1px solid #333;
+    text-align: center;
+    flex: 1;
+    min-width: 280px;
+    max-width: 450px;
+    transition: 0.3s ease;
+}
+
+.status-card:hover {
+    border-color: #a855f7;
+    transform: translateY(-10px);
+}
+
+.status-card i {
+    font-size: 3rem;
+    color: #a855f7;
+    margin-bottom: 20px;
+}
+
+.status-card h3 { font-size: 1.5rem; margin-bottom: 12px; letter-spacing: 1px; }
+.status-card p { color: #888; line-height: 1.6; }
+
+.footer {
+    background: #1c1024;
+    padding: 60px 8% 20px;
+    color: #fff;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+    align-items: start;
+}
+
+.footer-col h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.footer-col h3 span {
+    color: #a669e0;
+}
+
+.footer-col h4 {
+    color: #9d64d3;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-col p {
+    color: #fff9f9;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #fcf9f9;
+    text-decoration: none;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.footer-col ul li a:hover {
+    color: #8249b8;
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    color: #b6b4b4;
+    font-size: 0.85rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .navbar { padding: 15px 5%; }
+    .hero-content h1 { font-size: 2.5rem; }
+    .info-section { flex-direction: column; align-items: center; }
+    .status-card { width: 100%; }
+}
