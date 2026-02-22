@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body.selection-bg {
+    height: 100vh;
+    background: url("../assets/img4.jpg") no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+body.selection-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 1;
+}
+
+.selection-container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+}
+
+.selection-header {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.card-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.type-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-radius: 16px;
+    padding: 35px 30px;
+    width: 320px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.type-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.type-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+.type-card p {
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+    color: #ddd;
+    text-align: center;
+}
+
+.select-btn {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    background: #2f0b68;  
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.select-btn:hover {
+    background: #ab87e9;
+}
+
+/* Mobile Responsive Design */
+
+/* Tablets */
+@media (max-width: 992px) {
+    .selection-header {
+        font-size: 1.8rem;
+    }
+
+    .card-wrapper {
+        gap: 25px;
+    }
+
+    .type-card {
+        width: 280px;
+        padding: 30px 25px;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 600px) {
+
+    body.selection-bg {
+        padding: 20px;
+    }
+
+    .selection-header {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+
+    .card-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .type-card {
+        width: 100%;
+        max-width: 320px;
+        padding: 25px 20px;
+    }
+
+    .icon {
+        font-size: 38px;
+    }
+
+    .type-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .type-card p {
+        font-size: 0.85rem;
+    }
+
+    .select-btn {
+        width: 100%;
+        padding: 12px;
+    }
+}
