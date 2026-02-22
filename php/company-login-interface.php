@@ -108,7 +108,7 @@ $maintenance_count = 12; // e.g., vehicles in maintenance
                 <h4>Support</h4>
                 <ul>
                     <li><a href="../html/helpcentre.html">Help Center</a></li>
-                    <li><a href="../html/faq.html">FAQ</a></li>
+                    <li><a href="../html/contact.html">Contact Us</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -123,4 +123,5 @@ $maintenance_count = 12; // e.g., vehicles in maintenance
         </div>
     </footer>
 </body>
+
 </html>
