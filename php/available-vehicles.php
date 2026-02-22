@@ -126,8 +126,8 @@ if ($search_brand !== '' || $search_model !== '' || $search_year !== '') {
             <div class="footer-col">
                 <h4>Legal</h4>
                 <ul>
-                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                    <li><a href="terms-os.html">Terms of Service</a></li>
+                    <li><a href="../html/privacypolicy.html">Privacy Policy</a></li>
+                    <li><a href="../html/terms-os.html">Terms of Service</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -149,4 +149,5 @@ if ($search_brand !== '' || $search_model !== '' || $search_year !== '') {
         </div>
     </footer>
 </body>
+
 </html>
