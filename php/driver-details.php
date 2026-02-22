@@ -101,15 +101,15 @@ if (!$driver) {
             <div class="footer-col">
                 <h4>Legal</h4>
                 <ul>
-                    <li><a href="privacypolicy.html">Privacy Policy</a></li>
-                    <li><a href="terms-os.html">Terms of Service</a></li>
+                    <li><a href="../html/privacypolicy.html">Privacy Policy</a></li>
+                    <li><a href="../html/terms-os.html">Terms of Service</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h4>Support</h4>
                 <ul>
-                    <li><a href="helpcentre.html">Help Center</a></li>
-                    <li><a href="contacts.html">Contact Us</a></li>
+                    <li><a href="../html/helpcentre.html">Help Center</a></li>
+                    <li><a href="../html/contact.html">Contact Us</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -124,4 +124,5 @@ if (!$driver) {
         </div>
     </footer>
 </body>
+
 </html>
