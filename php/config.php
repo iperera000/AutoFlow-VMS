@@ -1,5 +1,4 @@
 <?php
-// config.php
 $host = 'localhost';
 $dbname = 'autoflow';
 $username = 'root';      // your MySQL username
@@ -11,4 +10,5 @@ try {
 } catch(PDOException $e) {
     die("Connection failed: " . $e->getMessage());
 }
+
 ?>
