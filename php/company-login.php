@@ -2,7 +2,6 @@
 session_start();
 require_once 'config.php';
 
-// Redirect if already logged in
 if (isset($_SESSION['admin_id'])) {
     header('Location: company-login-interface.php');
     exit;
@@ -32,6 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 ?>
+<!-- HTML form remains exactly as before -->
 
 <!DOCTYPE html>
 <html lang="en">

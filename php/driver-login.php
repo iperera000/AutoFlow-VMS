@@ -31,6 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 ?>
+<!-- HTML form remains exactly as before -->
 
 <!DOCTYPE html>
 <html lang="en">
