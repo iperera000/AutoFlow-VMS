@@ -91,16 +91,15 @@ $drivers = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <div class="footer-col">
                 <h4>Legal</h4>
                 <ul>
-                    <li><a href="../html/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="../html/privacypolicy.html">Privacy Policy</a></li>
                     <li><a href="../html/terms-os.html">Terms of Service</a></li>
-                    <li><a href="../html/cookie-policy.html">Cookie Policy</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h4>Support</h4>
                 <ul>
                     <li><a href="../html/helpcentre.html">Help Center</a></li>
-                    <li><a href="../html/faq.html">FAQ</a></li>
+                    <li><a href="../html/contact.html">Contact Us</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -115,4 +114,5 @@ $drivers = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </div>
     </footer>
 </body>
+
 </html>
